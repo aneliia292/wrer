@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text }}</p>
+        <div>
+            <a href="{% url 'update' post.id %}">Редактировать</a>
+            <a href="{% url 'delete' post.id %}">Удалить</a>
+        </div>
+        <p style="font-style: italic">{{ post.category }}</p>
+        <hr>
+    {% endfor %}
+
+    <a href="{% url 'create' %}">Создать</a>
+</body>
+</html>

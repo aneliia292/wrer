@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <p>Категория</p>
+            <input type="text" name="tetx" value="{{ post.category }}" >
+        </div>
+        <div>
+            <p>Новость</p>
+            <input type="text" name="title" value="{{ post.title }}">
+        <div>
+        <div>
+            <p>Текст</p>
+            <input type="text" name="text" value="{{ post.text }}">
+        </div>
+            <button>Refactor</button>
+    </form>
+</body>
+</html>
